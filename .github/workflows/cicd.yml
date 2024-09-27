@@ -14,18 +14,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: Install JDK 11
         uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
+
+      - name: Show JDK version
+        run: |
+          java --version
+          
       - name: Build SpringBoot Server
         run: |
           chmod 700 ./mvnw
           ./mvnw clean package -Dtestskip
-      - name: Show JDK version
-        run: |
-          java --version
+          
       - name: show directory
         run: |
+          cd ~/
           ls -a
