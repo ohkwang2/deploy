@@ -27,7 +27,7 @@ jobs:
           
       - name: Build SpringBoot Server
         run: |
-          echo ${{ secrets.APPLICATION_SECRET }} | base64 --decode > ./src/main/resouces/application_secret.yml
+          echo ${{ secrets.APPLICATION_SECRET }} | base64 --decode > ./src/main/resources/application_secret.yml
           chmod 700 ./mvnw
           ./mvnw clean package -Dtestskip
           
