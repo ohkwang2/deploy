@@ -35,3 +35,9 @@ jobs:
           ls -a
           cd ./target
           ls -a
+
+      - name: Login DockerHub
+        uses: docker/login-action@v1
+        with:
+          usename:
+          password:
