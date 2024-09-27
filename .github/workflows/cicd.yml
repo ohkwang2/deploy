@@ -32,5 +32,6 @@ jobs:
           
       - name: show directory
         run: |
-          cd ~/
+          ls -a
+          cd ./target
           ls -a
