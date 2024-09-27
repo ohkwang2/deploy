@@ -19,19 +19,13 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+      - name: Build SpringBoot Server
+        run: |
+          chmod 700 ./mvnw
+          ./mvnw clean package -Dtestskip
       - name: Show JDK version
         run: |
           java --version
       - name: show directory
         run: |
           ls -a
-      - name: test1
-        run: |
-          echo "test 출력" 
-      - name: test2
-        run: |
-          echo "test 출력" 
-      - name: test3
-        run: |
-          echo "test 출력" 
-      
