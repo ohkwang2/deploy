@@ -14,9 +14,9 @@ public class TestController {
     // application.yml의 클라이언트 주소를 불러와서 clientAddress 이름으로 저장
     private String clientAddress;
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://react9955.s3-website.ap-northeast-2.amazonaws.com")
     @GetMapping("/test")
     public ResponseEntity<?> test() {
-        return ResponseEntity.ok().body(null);
+        return ResponseEntity.ok().body(clientAddress + " 테스트!");
     }
 }
