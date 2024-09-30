@@ -16,7 +16,7 @@ public class HealthCheckController {
     // 현재 실행중인 서버
     private String env;
 
-    @Value("{server.port}")
+    @Value("${server.port}")
     // 현재 실행중인 포트
     private String port;
 
