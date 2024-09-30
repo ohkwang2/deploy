@@ -17,6 +17,6 @@ public class TestController {
     @CrossOrigin(origins = "http://react9955.s3-website.ap-northeast-2.amazonaws.com")
     @GetMapping("/test")
     public ResponseEntity<?> test() {
-        return ResponseEntity.ok().body(clientAddress + " 테스트!");
+        return ResponseEntity.ok().body(clientAddress + " 테스트! 홍길동");
     }
 }
